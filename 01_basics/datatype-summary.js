@@ -33,3 +33,28 @@ const myFunction = function(){
 }           //function
 
 console.log(typeof heroes);
+
+
+
+//***************************Memory ******************
+
+//Stack memory (primitive type) => make copy of that file
+//Heap memory (non primitive) => make referance of that file(original value)
+
+let myYoutubename = "triggered"
+let anotherName = myYoutubename
+anotherName = "chai with meghs"
+
+console.log(myYoutubename);
+console.log(anotherName);
+
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne;
+userTwo.email = "meghs@gmail.com"
+console.log(userOne.email);
+console.log(userTwo.email);
