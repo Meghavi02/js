@@ -1,0 +1,20 @@
+=> javascript execution context
+    -means how to execute javascript file or run the file 
+    -it can run in 2 phases 
+    -1st it can execute global execution context(gec)
+    -gec can be refer as this keyword  
+    -in that this keyword value is windows object in browser
+
+global 
+function 
+eval execution context
+
+=> Memory creation phase // creation phase
+=> execute phase
+
+1. global execution phase(this keyword)
+2. memory phase
+3. execution phase
+
+
+    
