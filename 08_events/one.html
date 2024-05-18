@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.template.net/wp-content/uploads/2016/06/21052952/Tree-Amazing-qallpaper-Photography-Nature-Landscape.jpg?width=480" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://www.luxurylifestylemag.co.uk/wp-content/uploads/2021/04/cherry-blossoms-5082240_1920.jpg" alt=""></li>
+            <li><img width="200px" id="river" src="https://cdn.create.vista.com/api/media/small/178434780/stock-photo-mountain-river-in-summer-bialka-river-poland" alt=""></li>
+            <li><img width="200px" id="owl" src="https://www.treehugger.com/thmb/sF_x9pG7H7fKJf1MzILLygogNiY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/owl.primary-671bc7874505441886009abe5928a1c4.jpg" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://img.freepik.com/free-photo/spiritual-prayer-hands-sun-shine-with-blurred-beautiful-sunset_1150-7173.jpg?t=st=1716019611~exp=1716023211~hmac=3d83949cc6005ad731f5e93ff91807a9e3a0a0536932fd2fcf13251538614e02&w=900" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+            
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+    //attachEvent()
+    //jQuery -on
+    //types, timestamp, defaultPrevented
+    //target, oElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode
+    //capturing mode means => true
+    //public mode means => false
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Clicked inside the ul");
+    // }, false);
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false);
+    
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log("google clicked");
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // }, false);
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+       
+        // removeIt.parentNode.removeChild(removeIt)
+    })
+</script>
+</html>
